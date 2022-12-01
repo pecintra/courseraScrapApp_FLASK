@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Coursera scraping</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <img src="https://149357281.v2.pressablecdn.com/wp-content/uploads/2020/12/cropped-android-chrome-512x512-1.png">
+    <br>
+    <div id="content">
+        <form action="/scrap" method="post" >
+            {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+            {% endfor %}
+            <br>
+            <select name="coursesForm">
+                <option value="0">Data Science</option>
+                <option value="1">Business</option>
+                <option value="2">Personal Development</option>
+                <option value="3">Computer Science</option>
+                <option value="4">Information Technology</option>
+                <option value="5">Language Learning</option>
+                <option value="6">Math and Logic</option>
+                <option value="7">Physical Science and Engineering</option>
+                <option value="8">Health</option>
+                <option value="9">Social Sciences</option>
+                <option value="10">Arts and Humanities</option>
+                
+            </select>
+            <br>
+            <input type="submit" value="SCRAP" id="scrap">
+        </form>
+    </div>
+    
+</body>
+</html>
